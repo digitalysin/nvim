@@ -48,7 +48,6 @@ return {
         filetypes = { "elixir", "eelixir", "heex", "surface" },
         single_file_support = true,
         cmd = { "elixir-ls" },
-        -- cmd = { "/Users/galihwidyarta/Applications/elixir-ls-v0.20.0/language_server.sh" },
       })
 
       -- to show documentation
