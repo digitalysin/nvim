@@ -18,3 +18,4 @@ require("lazy").setup("plugins")
 
 require("configs/mappings")
 
+vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })

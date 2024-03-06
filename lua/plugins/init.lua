@@ -335,4 +335,8 @@ return {
 			vim.o.timeoutlen = 500
 		end,
 	},
+
+	-- cmd line
+	"VonHeikemen/fine-cmdline.nvim",
+	dependencies = { "MunifTanjim/nui.nvim" },
 }
