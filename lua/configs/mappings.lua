@@ -81,3 +81,29 @@ wk.register({
     u = { "<cmd>JdtUpdateDebugConfig<cr>", "Update debug config" },
   },
 }, opts)
+
+-- register for terminal
+local term = require("nvterm.terminal")
+
+wk.register({
+  t = {
+    h = {
+      function()
+        term.toggle("horizontal")
+      end,
+      "Lauch horizontal terminal",
+    },
+    v = {
+      function()
+        term.toggle("vertical")
+      end,
+      "Launch vertical terminal",
+    },
+    g = {
+      function()
+        term.send("lazygit", "float")
+      end,
+      "Launch git terminal",
+    },
+  },
+}, opts)
