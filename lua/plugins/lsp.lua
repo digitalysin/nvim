@@ -49,20 +49,6 @@ return {
 				single_file_support = true,
 				cmd = { "elixir-ls" },
 			}, {})
-
-			-- setup jdtls
-
-			-- to show documentation
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-
-			-- for code action
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-
-			-- for code navigation
-			vim.keymap.set("n", "<leader>gc", vim.lsp.buf.declaration, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>gdt", vim.lsp.buf.type_definition, {})
-			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.rename, {})
 		end,
 	},
 }

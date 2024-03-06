@@ -4,7 +4,5 @@ return {
     require("bufdel").setup({
       next = "tabs",
     })
-
-    vim.keymap.set("n", "<leader>bd", ":BufDel<CR>", {})
   end,
 }
