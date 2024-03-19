@@ -16,8 +16,15 @@ make sure you have installed golang, java21 and latest elixir and erlang
 * java-debug for debugging java application [here](https://github.com/microsoft/vscode-java-test)
 
 
-## Other things you have to concern:
+## For java development
 
 * create directory in `~/.local/share/jdtls` and put `jdtls.jar` into that directory
 * put any `*.jar` generated from java-debug
 * put any `*.jar` generated from vscode-java-test
+
+## For dotnet development
+
+To develop dotnet application, you need to setup and download `omnisharp rosyln` server manually
+from [here](https://github.com/OmniSharp/omnisharp-roslyn/releases) and then follow these step:
+
+* Extract downloaded omnisharp server to "$HOME/.local/share/omnisharp"
