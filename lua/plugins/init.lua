@@ -158,7 +158,7 @@ return {
 				capabilities = capabilities,
 				filtetypes = { "cs", "csproj", "sln" },
 				single_file_support = true,
-        cmd = { "omnisharp" },
+				cmd = { "omnisharp" },
 			})
 		end,
 	},
@@ -178,6 +178,9 @@ return {
 					null_ls.builtins.formatting.gofmt,
 					null_ls.builtins.formatting.goimports,
 					null_ls.builtins.formatting.golines,
+
+					-- c# formatting
+					null_ls.builtins.formatting.csharpier,
 				},
 
 				on_attach = function(client, bufnr)
