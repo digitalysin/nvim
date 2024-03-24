@@ -83,7 +83,7 @@ wk.register({
 }, opts)
 
 -- register for terminal
-local term = require("FTerm")
+local term = require("nvterm.terminal")
 
 wk.register({
 	t = {
@@ -98,6 +98,12 @@ wk.register({
 				term.toggle("vertical")
 			end,
 			"Launch vertical terminal",
+		},
+		f = {
+			function()
+				term.toggle("float")
+			end,
+			"Launch floating terminal",
 		},
 		g = {
 			function()
