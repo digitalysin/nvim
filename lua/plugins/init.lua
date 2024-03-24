@@ -181,6 +181,9 @@ return {
 
 					-- c# formatting
 					null_ls.builtins.formatting.csharpier,
+
+					-- java formatting
+					null_ls.builtins.formatting.google_java_format,
 				},
 
 				on_attach = function(client, bufnr)
