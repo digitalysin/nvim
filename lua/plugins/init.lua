@@ -356,4 +356,20 @@ return {
 		"VonHeikemen/fine-cmdline.nvim",
 		dependencies = { "MunifTanjim/nui.nvim" },
 	},
+
+	-- comment
+	{
+		"numToStr/Comment.nvim",
+		opts = {},
+		lazy = false,
+		config = function()
+			local cmt = require("Comment")
+			cmt.setup({
+				mappings = {
+					basic = true,
+					extra = false,
+				},
+			})
+		end,
+	},
 }
