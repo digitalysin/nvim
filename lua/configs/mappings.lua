@@ -113,3 +113,25 @@ wk.register({
 		},
 	},
 }, opts)
+
+-- neogit
+local neogit = require("neogit")
+
+wk.register({
+	k = {
+		o = {
+			function()
+				neogit.open()
+			end,
+			"Open neogit",
+		},
+		d = {
+			"<cmd>DiffviewOpen<CR>",
+			"Open diff tool",
+		},
+		h = {
+			"<cmd>DiffviewFileHistory<CR>",
+			"Open diff file history",
+		},
+	},
+}, opts)
