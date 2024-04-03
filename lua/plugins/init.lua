@@ -118,6 +118,7 @@ return {
 					"gopls",
 					"elixirls",
 					"omnisharp",
+					"lemminx",
 				},
 				automatic_installation = true,
 			})
