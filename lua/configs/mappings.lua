@@ -135,3 +135,47 @@ wk.register({
 		},
 	},
 }, opts)
+
+-- register copilot chat
+local chat = require("CopilotChat")
+local actions = require("CopilotChat.actions")
+local integration = require("CopilotChat.integrations.fzflua")
+
+local function pick(pick_actions)
+	return function()
+		integration.pick(pick_actions(), {
+			fzf_tmux_opts = {
+				["-d"] = "45%",
+			},
+		})
+	end
+end
+
+wk.register({
+	a = {
+		a = {
+			function()
+				chat.toggle()
+			end,
+			"Toogle Copilot Chat",
+		},
+		x = {
+			function()
+				chat.reset()
+			end,
+			"Reset Copilot Chat",
+		},
+		h = {
+			function()
+				pick(actions.help_actions)
+			end,
+			"AI Help Actions",
+		},
+		p = {
+			function()
+				pick(actions.prompt_actions)
+			end,
+			"AI Help Actions",
+		},
+	},
+}, opts)
