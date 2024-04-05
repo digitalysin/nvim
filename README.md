@@ -14,7 +14,7 @@ make sure you have installed asdf, golang, erlang, elixir, java, dotnet and node
 
 ## Other dependencies for debugging and LSP
 * delve for debugging golang application
-* jdtls for LSP [here](https://www.eclipse.org/downloads/download.php?file=/jdtls/snapshots/jdt-language-server-1.34.0-202403060309.tar.gz)
+* jdtls for LSP [here](https://download.eclipse.org/jdtls/snapshots/?d) right now using version jdt-language-server-1.34.0-202404031240.tar.gz
 * vscode-java-test for debugging java test [here](https://github.com/microsoft/java-debug)
 * java-debug for debugging java application [here](https://github.com/microsoft/vscode-java-test)
 
