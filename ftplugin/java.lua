@@ -6,7 +6,12 @@ local config = {
 
 	settings = {
 		java = {
+			home = home .. "/.asdf/installs/java/openjdk-22",
+			eclise = {
+				downloadSources = true,
+			},
 			configuration = {
+				updateBuildCOnfiguration = "interactive",
 				runtimes = {
 					{
 						name = "JavaSE-1.8",
@@ -34,6 +39,33 @@ local config = {
 						path = home .. "/.asdf/installs/java/openjdk-22", -- later will update to use adoptopenjdk version
 					},
 				},
+			},
+			maven = {
+				downloadSources = true,
+				updateSnapshots = true,
+				updateIndexes = true,
+			},
+			implementation = {
+				preferred = "openjdk-22",
+			},
+			implementationCodeLens = {
+				enabled = true,
+			},
+			referencesCodeLens = {
+				enabled = true,
+			},
+			references = {
+				includeDecompiledSources = true,
+			},
+			format = {
+				enabled = true,
+				settings = {
+					url = home .. "/.local/share/jdtls/formatter.xml",
+					profile = "GoogleStyle",
+				},
+			},
+			signatureHelp = {
+				enabled = true,
 			},
 		},
 	},
