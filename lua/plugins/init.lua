@@ -106,7 +106,13 @@ return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+				ensure_installed = {
+					"black",
+					"ruff",
+					"isort",
+				},
+			})
 		end,
 	},
 	{
@@ -119,6 +125,7 @@ return {
 					"elixirls",
 					"omnisharp",
 					"lemminx",
+					"pyright",
 				},
 				automatic_installation = true,
 			})
@@ -162,12 +169,22 @@ return {
 				single_file_support = true,
 				cmd = { "omnisharp" },
 			})
+
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+				filetypes = { "python" },
+				single_file_support = true,
+				cmd = { "pyright-langserver", "--stdio" },
+			})
 		end,
 	},
 
 	-- null ls for formatting linters etc
 	{
 		"nvimtools/none-ls.nvim",
+		dependencies = {
+			"nvimtools/none-ls-extras.nvim",
+		},
 		config = function()
 			local null_ls = require("null-ls")
 
@@ -186,6 +203,9 @@ return {
 
 					-- java formatting
 					null_ls.builtins.formatting.google_java_format,
+
+					-- python formatting
+					require("none-ls.diagnostics.ruff"),
 				},
 
 				on_attach = function(client, bufnr)
