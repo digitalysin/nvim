@@ -36,7 +36,7 @@ local config = {
 					},
 					{
 						name = "JavaSE-22",
-						path = home .. "/.asdf/installs/java/openjdk-22", -- later will update to use adoptopenjdk version
+						path = home .. "/.asdf/installs/java/adoptopenjdk-22.0.1+8",
 					},
 				},
 			},
@@ -46,7 +46,7 @@ local config = {
 				updateIndexes = true,
 			},
 			implementation = {
-				preferred = "openjdk-22",
+				preferred = "adoptopenjdk-22.0.1+8",
 			},
 			implementationCodeLens = {
 				enabled = true,
