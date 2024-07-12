@@ -15,7 +15,18 @@ return {
     name = "catppuccin",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin-mocha")
+      -- vim.cmd.colorscheme("catppuccin-mocha")
+    end,
+  },
+
+  {
+    'maxmx03/solarized.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.o.background = 'dark' -- or 'light'
+
+      vim.cmd.colorscheme 'solarized'
     end,
   },
 
@@ -99,6 +110,16 @@ return {
       dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
       end
+    end,
+  },
+
+  {
+    'nicholasmata/nvim-dap-cs',
+    dependencies = {
+      'mfussenegger/nvim-dap'
+    },
+    config = function()
+      require('dap-cs').setup()
     end,
   },
 
