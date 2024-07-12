@@ -107,11 +107,7 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup({
-        ensure_installed = {
-          "black",
-          "ruff",
-          "isort",
-        },
+        ensure_installed = {},
       })
     end,
   },
@@ -324,7 +320,6 @@ return {
           "javascript",
           "html",
           "css",
-          "csharp",
           "lua",
         },
         sync_install = false,
