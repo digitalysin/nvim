@@ -4,8 +4,6 @@
 ## Requirements
 * asdf   (master)
 * golang (1.22.1)
-* erlang (otp-26)
-* elixir (1.16)
 * java   (21)
 * dotnet (v8)
 * nodejs (v20.11.1)
