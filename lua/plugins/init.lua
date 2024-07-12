@@ -122,10 +122,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "gopls",
-          "elixirls",
           "omnisharp",
-          "lemminx",
-          "pyright",
         },
         automatic_installation = true,
       })
@@ -156,25 +153,12 @@ return {
         },
       })
 
-      lspconfig.elixirls.setup({
-        capabilities = capabilities,
-        filetypes = { "elixir", "eelixir", "heex", "surface" },
-        single_file_support = true,
-        cmd = { "elixir-ls" },
-      }, {})
 
       lspconfig.omnisharp.setup({
         capabilities = capabilities,
         filtetypes = { "cs", "csproj", "sln" },
         single_file_support = true,
         cmd = { "omnisharp" },
-      })
-
-      lspconfig.pyright.setup({
-        capabilities = capabilities,
-        filetypes = { "python" },
-        single_file_support = true,
-        cmd = { "pyright-langserver", "--stdio" },
       })
     end,
   },
@@ -201,12 +185,6 @@ return {
           -- c# formatting
           null_ls.builtins.formatting.csharpier,
 
-          -- java formatting
-          null_ls.builtins.formatting.google_java_format,
-
-          -- python formatting
-          require("none-ls.diagnostics.ruff"),
-          null_ls.builtins.formatting.black,
         },
 
         on_attach = function(client, bufnr)
@@ -343,13 +321,11 @@ return {
         ensure_installed = {
           "go",
           "java",
-          "rust",
-          "python",
           "javascript",
-          "typescript",
-          "elixir",
           "html",
           "css",
+          "csharp",
+          "lua",
         },
         sync_install = false,
         highlight = { enable = true },
@@ -399,12 +375,12 @@ return {
   {
     "NeogitOrg/neogit",
     dependencies = {
-      "nvim-lua/plenary.nvim", -- required
+      "nvim-lua/plenary.nvim",  -- required
       "sindrets/diffview.nvim", -- optional - Diff integration
 
       -- Only one of these is needed, not both.
       "nvim-telescope/telescope.nvim", -- optional
-      "ibhagwan/fzf-lua",           -- optional
+      "ibhagwan/fzf-lua",              -- optional
     },
     config = true,
   },
@@ -427,7 +403,7 @@ return {
       "CopilotC-Nvim/CopilotChat.nvim",
       branch = "canary",
       dependencies = {
-        { "github/copilot.vim" }, -- or github/copilot.vim
+        { "github/copilot.vim" },    -- or github/copilot.vim
         { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
       },
       opts = {
