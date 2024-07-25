@@ -4,6 +4,13 @@ local opts = {
   prefix = "<leader>",
 }
 
+local codeOpts = {
+  prefix = "<leader>",
+  mode = "n",
+  noremap = true,
+  silent = true,
+}
+
 -- register mapping for file navigation
 wk.register({
   f = {
@@ -40,8 +47,12 @@ wk.register({
     rr = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
     s = { "<cmd>SymbolsOutline<cr>", "Show structure" },
     f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format source code" },
+    i = { "<C-i>", "Go to newer position" },
+    ["<C-i>"] = { "<Nop>", "Disable original Ctrl+i" },
+    o = { "<C-o>", "Go to older position" },
+    ["<C-o>"] = { "<Nop>", "Disable original Ctrl+o" },
   },
-}, opts)
+}, codeOpts)
 
 -- register for debugging
 local dap = require("dap")
