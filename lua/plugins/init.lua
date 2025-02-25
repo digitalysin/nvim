@@ -15,7 +15,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     config = function()
-      -- vim.cmd.colorscheme("catppuccin-mocha")
+      vim.cmd.colorscheme("catppuccin-mocha")
     end,
   },
 
@@ -24,9 +24,9 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.o.background = 'dark' -- or 'light'
+      -- vim.o.background = 'dark' -- or 'light'
 
-      vim.cmd.colorscheme 'solarized'
+      -- vim.cmd.colorscheme 'solarized'
     end,
   },
 

@@ -20,6 +20,3 @@ require("lazy").setup("plugins")
 require("configs/mappings")
 
 vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
-
-vim.g.OmniSharp_server_stdio = 1
-vim.g.OmniSharp_server_parth = home .. "/.local/share/omnisharp"

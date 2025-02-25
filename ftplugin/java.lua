@@ -6,37 +6,33 @@ local config = {
 
   settings = {
     java = {
-      home = home .. "/.asdf/installs/java/openjdk-22",
+      home = home .. "/.local/share/mise/installs/java/temurin-23.0.2+7",
       eclise = {
         downloadSources = true,
       },
       configuration = {
-        updateBuildCOnfiguration = "interactive",
+        updateBuildConfiguration = "interactive",
         runtimes = {
           {
             name = "JavaSE-1.8",
-            path = home .. "/.asdf/installs/java/corretto-8.362.08.1", -- for compability between macos and linux
+            path = home .. "/.local/share/mise/installs/java/corretto-8.442.06.1",
           },
           {
             name = "JavaSE-11",
-            path = home .. "/.asdf/installs/java/adoptopenjdk-11.0.21+9",
-          },
-          {
-            name = "JavaSE-17",
-            path = home .. "/.asdf/installs/java/adoptopenjdk-17.0.10+7",
-          },
-          {
-            name = "JavaSE-20",
-            path = home .. "/.asdf/installs/java/adoptopenjdk-20.0.2+9",
+            path = home .. "/.local/share/mise/installs/java/temurin-11.0.25+9",
           },
           {
             name = "JavaSE-21",
-            path = home .. "/.asdf/installs/java/adoptopenjdk-21.0.2+13.0.LTS",
-            default = true,
+            path = home .. "/.local/share/mise/installs/java/temurin-21.0.6+7.0.LTS",
           },
           {
             name = "JavaSE-22",
-            path = home .. "/.asdf/installs/java/adoptopenjdk-22.0.1+8",
+            path = home .. "/.local/share/mise/installs/java/temurin-22.0.1+8"
+          },
+          {
+            name = "JavaSE-23",
+            path = home .. "/.local/share/mise/installs/java/temurin-23.0.2+7",
+            default = true,
           },
         },
       },
@@ -46,7 +42,7 @@ local config = {
         updateIndexes = true,
       },
       implementation = {
-        preferred = "adoptopenjdk-22.0.1+8",
+        preferred = "temurin-23.0.2+7",
       },
       implementationCodeLens = {
         enabled = true,

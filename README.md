@@ -1,14 +1,12 @@
-# NVIM for golang, java and elixir
-
+# NVIM for golang, java
 
 ## Requirements
-* asdf   (master)
+* mise   (master)
 * golang (1.22.1)
-* java   (21)
-* dotnet (v8)
+* java   (23)
 * nodejs (v20.11.1)
 
-make sure you have installed asdf, golang, erlang, elixir, java, dotnet and nodejs
+make sure you have installed asdf, golang, java, nodejs
 
 ## Other dependencies for debugging and LSP
 * delve for debugging golang application
@@ -42,10 +40,3 @@ cp com.microsoft.java.debug.plugin/target/*.jar ~/.local/share/jdtls/
 * run `npm install`
 * run `nom run build-plugin`
 * run `cp server/*.jar ~/.local/share/jdtls/`
-
-## For DotNet development
-
-To develop dotnet application, you need to setup and download `omnisharp rosyln` server manually
-from [here](https://github.com/OmniSharp/omnisharp-roslyn/releases) and then follow these step:
-
-* Extract downloaded omnisharp server to "$HOME/.local/share/omnisharp"
