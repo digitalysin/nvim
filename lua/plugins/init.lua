@@ -407,7 +407,7 @@ return {
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
       local home = os.getenv("HOME")
-      local path = home .. "/.asdf/shims/mvn"
+      local path = home .. "/.local/share/mise/installs/maven/3.9.9/bin/mvn"
       require("maven").setup({
         executable = path,
       })
