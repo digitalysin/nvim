@@ -20,3 +20,11 @@ require("lazy").setup("plugins")
 require("configs/mappings")
 
 vim.api.nvim_set_keymap("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
+
+
+require("lspconfig").gleam.setup({})
+
+vim.g.go_fmt_command = "golines"
+vim.g.go_fmt_options = {
+  golines = "-m 96"
+}

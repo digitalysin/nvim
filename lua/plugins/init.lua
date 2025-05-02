@@ -139,7 +139,6 @@ return {
         ensure_installed = {
           "lua_ls",
           "gopls",
-          "omnisharp",
         },
         automatic_installation = true,
       })
@@ -342,6 +341,7 @@ return {
           "html",
           "css",
           "lua",
+          "gleam",
         },
         sync_install = false,
         highlight = { enable = true },

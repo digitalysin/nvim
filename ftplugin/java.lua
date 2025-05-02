@@ -6,7 +6,7 @@ local config = {
 
   settings = {
     java = {
-      home = home .. "/.local/share/mise/installs/java/temurin-23.0.2+7",
+      home = home .. "/.local/share/mise/installs/java/openjdk-24.0.0",
       eclise = {
         downloadSources = true,
       },
@@ -42,7 +42,7 @@ local config = {
         updateIndexes = true,
       },
       implementation = {
-        preferred = "temurin-23.0.2+7",
+        preferred = "openjdk-24.0.0",
       },
       implementationCodeLens = {
         enabled = true,
