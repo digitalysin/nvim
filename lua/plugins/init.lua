@@ -160,6 +160,7 @@ return {
         filetypes = { "go", "gomod", "goworkd", "gotmpl" },
         settings = {
           gopls = {
+            gofumpt = true,
             completeUnimported = true,
             usePlaceholders = true,
             analyses = {
@@ -196,7 +197,9 @@ return {
           -- golang formatting
           null_ls.builtins.formatting.gofmt,
           null_ls.builtins.formatting.goimports,
-          null_ls.builtins.formatting.golines,
+          null_ls.builtins.formatting.golines.with({
+            extra_args = { "-m", "96" },
+          }),
 
           -- c# formatting
           null_ls.builtins.formatting.csharpier,
