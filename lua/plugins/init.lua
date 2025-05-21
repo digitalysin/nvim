@@ -536,4 +536,16 @@ return {
       vim.keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
     end,
   },
+
+  -- indent
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    main = "ibl",
+    opts = {
+      indent = {
+        char = "▏",
+      },
+    }
+  },
 }

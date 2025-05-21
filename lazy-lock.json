@@ -14,6 +14,7 @@
   "fzf-lua": { "branch": "main", "commit": "8adf950093af5361621cf52208d64995b1af78b5" },
   "hererocks": { "branch": "master", "commit": "344c46ed54df9a4dbc2d2bf510dcd9a9d90497bf" },
   "image.nvim": { "branch": "master", "commit": "4c51d6202628b3b51e368152c053c3fb5c5f76f2" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lualine.nvim": { "branch": "master", "commit": "0c6cca9f2c63dadeb9225c45bc92bb95a151d4af" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "ce0e87c0be12e7c48296a7513e90430e3eac7f24" },
