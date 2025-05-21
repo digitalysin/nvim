@@ -19,17 +19,6 @@ return {
     end,
   },
 
-  {
-    'maxmx03/solarized.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.o.background = 'dark' -- or 'light'
-
-      -- vim.cmd.colorscheme 'solarized'
-    end,
-  },
-
   -- completion
   {
     "hrsh7th/cmp-nvim-lsp",
@@ -114,18 +103,18 @@ return {
   },
 
   {
-    'nicholasmata/nvim-dap-cs',
+    "nicholasmata/nvim-dap-cs",
     dependencies = {
-      'mfussenegger/nvim-dap'
+      "mfussenegger/nvim-dap",
     },
     config = function()
-      require('dap-cs').setup()
+      require("dap-cs").setup()
     end,
   },
 
   -- LSP
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     config = function()
       require("mason").setup({
         ensure_installed = {},
@@ -170,7 +159,6 @@ return {
         },
       })
 
-
       lspconfig.omnisharp.setup({
         capabilities = capabilities,
         filtetypes = { "cs", "csproj", "sln" },
@@ -197,13 +185,9 @@ return {
           -- golang formatting
           null_ls.builtins.formatting.gofmt,
           null_ls.builtins.formatting.goimports,
-          null_ls.builtins.formatting.golines.with({
-            extra_args = { "-m", "96" },
-          }),
 
           -- c# formatting
           null_ls.builtins.formatting.csharpier,
-
         },
 
         on_attach = function(client, bufnr)
@@ -394,12 +378,12 @@ return {
   {
     "NeogitOrg/neogit",
     dependencies = {
-      "nvim-lua/plenary.nvim",  -- required
+      "nvim-lua/plenary.nvim", -- required
       "sindrets/diffview.nvim", -- optional - Diff integration
 
       -- Only one of these is needed, not both.
       "nvim-telescope/telescope.nvim", -- optional
-      "ibhagwan/fzf-lua",              -- optional
+      "ibhagwan/fzf-lua",           -- optional
     },
     config = true,
   },
@@ -420,9 +404,9 @@ return {
   {
     {
       "CopilotC-Nvim/CopilotChat.nvim",
-      branch = "canary",
+      branch = "main",
       dependencies = {
-        { "github/copilot.vim" },    -- or github/copilot.vim
+        { "github/copilot.vim" }, -- or github/copilot.vim
         { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
       },
       opts = {
