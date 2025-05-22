@@ -149,7 +149,6 @@ return {
         filetypes = { "go", "gomod", "goworkd", "gotmpl" },
         settings = {
           gopls = {
-            gofumpt = true,
             completeUnimported = true,
             usePlaceholders = true,
             analyses = {
@@ -183,8 +182,11 @@ return {
           null_ls.builtins.formatting.stylua,
 
           -- golang formatting
-          null_ls.builtins.formatting.golines,
           null_ls.builtins.formatting.goimports,
+          null_ls.builtins.formatting.golines.with({
+            extra_args = { "--max-len=100" },
+          }),
+          null_ls.builtins.formatting.gofumpt,
 
           -- c# formatting
           null_ls.builtins.formatting.csharpier,
@@ -546,6 +548,12 @@ return {
       indent = {
         char = "▏",
       },
-    }
+    },
+  },
+  {
+    "m4xshen/smartcolumn.nvim",
+    opts = {
+      colorcolumn = "100",
+    },
   },
 }
