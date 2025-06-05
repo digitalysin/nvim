@@ -6,7 +6,7 @@ local config = {
 
   settings = {
     java = {
-      home = home .. "/.local/share/mise/installs/java/openjdk-24.0.0",
+      home = home .. "/.local/share/mise/installs/java/temurin-24.0.1+9",
       eclise = {
         downloadSources = true,
       },
@@ -14,24 +14,12 @@ local config = {
         updateBuildConfiguration = "interactive",
         runtimes = {
           {
-            name = "JavaSE-1.8",
-            path = home .. "/.local/share/mise/installs/java/corretto-8.442.06.1",
-          },
-          {
             name = "JavaSE-11",
-            path = home .. "/.local/share/mise/installs/java/temurin-11.0.25+9",
+            path = home .. "/.local/share/mise/installs/java/temurin-11.0.27+6",
           },
           {
-            name = "JavaSE-21",
-            path = home .. "/.local/share/mise/installs/java/temurin-21.0.6+7.0.LTS",
-          },
-          {
-            name = "JavaSE-22",
-            path = home .. "/.local/share/mise/installs/java/temurin-22.0.1+8"
-          },
-          {
-            name = "JavaSE-23",
-            path = home .. "/.local/share/mise/installs/java/temurin-23.0.2+7",
+            name = "JavaSE-24",
+            path = home .. ".local/share/mise/installs/java/temurin-24.0.1+9",
             default = true,
           },
         },
@@ -42,7 +30,7 @@ local config = {
         updateIndexes = true,
       },
       implementation = {
-        preferred = "openjdk-24.0.0",
+        preferred = "temurin-24.0.1+9",
       },
       implementationCodeLens = {
         enabled = true,
