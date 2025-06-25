@@ -13,6 +13,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+vim.o.foldmethod = 'manual'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldenable = false
 
 require("global")
 require("lazy").setup("plugins")

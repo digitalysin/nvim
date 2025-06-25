@@ -346,6 +346,7 @@ return {
         sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },
+        folding = { enabled = true },
       })
     end,
   },
@@ -391,12 +392,12 @@ return {
   {
     "NeogitOrg/neogit",
     dependencies = {
-      "nvim-lua/plenary.nvim", -- required
+      "nvim-lua/plenary.nvim",  -- required
       "sindrets/diffview.nvim", -- optional - Diff integration
 
       -- Only one of these is needed, not both.
       "nvim-telescope/telescope.nvim", -- optional
-      "ibhagwan/fzf-lua",           -- optional
+      "ibhagwan/fzf-lua",              -- optional
     },
     config = true,
   },
@@ -419,7 +420,7 @@ return {
       "CopilotC-Nvim/CopilotChat.nvim",
       branch = "main",
       dependencies = {
-        { "github/copilot.vim" }, -- or github/copilot.vim
+        { "github/copilot.vim" },    -- or github/copilot.vim
         { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
       },
       opts = {
@@ -497,7 +498,7 @@ return {
   {
     "rachartier/tiny-inline-diagnostic.nvim",
     event = "VeryLazy", -- Or `LspAttach`
-    priority = 1000,  -- needs to be loaded in first
+    priority = 1000,    -- needs to be loaded in first
     config = function()
       require("tiny-inline-diagnostic").setup({
         preset = "simple",
@@ -566,5 +567,17 @@ return {
     opts = {
       colorcolumn = "100",
     },
+  },
+
+  -- rest client
+  {
+    "rest-nvim/rest.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      opts = function(_, opts)
+        opts.ensure_installed = opts.ensure_installed or {}
+        table.insert(opts.ensure_installed, "http")
+      end,
+    }
   },
 }
